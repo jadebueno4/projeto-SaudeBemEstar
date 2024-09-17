@@ -1,0 +1,27 @@
+.nav_geral
+  {
+    background-color: #365f88;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    
+  }
+
+
+.aside1 
+  {
+    background-color: #365f88;
+    padding: 30px;
+    color: white;
+    text-align:left;
+    font-size: 15px;
+  }
+
+  .aside 
+  {
+    background-color: #365f88;
+    padding: 30px;
+    color: white;
+    text-align:right;
+    font-size: 15px;
+  }

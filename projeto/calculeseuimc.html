@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cálculos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../saude bem-estar/stylesheet.css">
+  </head>
+
+  <body>
+    <div class="nav_geral">        
+      <img src="../saude bem-estar/SAUDE BEM ESTAR/IMAGENS/pagina pricipal site.png" alt="..." width="100%">
+      <p></p>
+      <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> ÍNDICE DE MASSA CORPORAL</h1>
+      <p></p>
+    </div>
+
+        <div class="container-fluid">
+            <form name="calc"  method="GET" >
+            <div class="mb-3">
+                <label class="form-label">Por favor, Entre com o seu Peso (Kg):</label>
+                <input type="number" name="peso" id="peso" class="form-control w-75"><br>
+                <label class="form-label">Por favor, Entre com a sua Altura (metros):</label>
+                <input type="number" name="altura" id="altura" class="form-control w-75"><br>
+                <button type="button" name="botao" id="idBotao" onclick="imc_result();" class="btn btn-success" style="background-color: #365f88;">Cálcular</button>
+                <a href="../saude bem-estar/index.html"><button type="button" name="botao" id="idBotao" class="btn btn-success" style="background-color:#365f88;">Voltar</button></a>        
+            </div>
+        </div>
+
+        <script>
+          function imc_result()
+          {
+          var valorPeso = document.getElementById("peso").value;
+          var valorAltura = document.getElementById("altura").value;
+
+          N1 = Number(valorPeso);
+          N2 = Number(valorAltura);
+
+          imc = N1/(N2*N2);
+
+          document.getElementById("mostrarimc").innerHTML = "Seu IMC é: " + imc;
+          document.getElementById("mostrarfrase").innerHTML = "Agora, veja a classificação na tabela abaixo:";
+          }
+        </script>
+
+        <p><span id="mostrarimc"></span></p>
+        <p><span id="mostrarfrase"></span></p>
+        <img src="SAUDE BEM ESTAR/IMAGENS/tabela_imc.jpg" width="500" height="250"> 
+                 
+
+</body>
+</html>
